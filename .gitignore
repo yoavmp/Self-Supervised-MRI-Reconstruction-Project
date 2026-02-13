@@ -1,0 +1,20 @@
+# environments
+.venv/
+
+# python
+__pycache__/
+*.pyc
+
+# training artifacts
+runs/
+checkpoints/
+saved_infor/
+*.pth
+*.pth.tar
+
+# logs / outputs
+*.log
+*.png
+
+# backups
+*.bak
