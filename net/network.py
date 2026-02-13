@@ -35,3 +35,12 @@ class ParallelNetwork(nn.Module):
         output_up, loss_layers_up = self.up_network(under_img_up, mask_up)
         output_down, loss_layers_down = self.down_network(under_img_down, mask_down)
         return output_up, loss_layers_up, output_down, loss_layers_down
+
+class SingleNetwork(nn.Module):
+    def __init__(self, num_layers, rank):
+        super().__init__()
+        self.net = ISTANetPlus(num_layers, rank)
+
+    def forward(self, under_img, mask):
+        out, layers_sym = self.net(under_img, mask)
+        return out, layers_sym
