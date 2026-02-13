@@ -18,3 +18,8 @@ saved_infor/
 
 # backups
 *.bak
+
+# local scratch
+fastmri_dataset_updated.py
+main_updated.py
+logger.txt
